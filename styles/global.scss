@@ -1,0 +1,15 @@
+@import './variables';
+
+// style for html tags
+
+* {
+  box-sizing: border-box;
+  font-weight: inherit;
+  line-height: 1.5;
+}
+
+//templates
+
+%error {
+  color: $red;
+}

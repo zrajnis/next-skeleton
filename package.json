@@ -1,0 +1,92 @@
+{
+  "name": "next-skeleton",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "build": "next build",
+    "dev": "node server.js",
+    "lint:check": "eslint ./",
+    "lint:fix": "eslint ./ --fix",
+    "stylelint:check": "sass-lint -c .sass-lint.yml -v -q",
+    "snapshots": "jest -u",
+    "start": "next start",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@zeit/next-sass": "^0.2.0",
+    "babel-eslint": "^8.2.3",
+    "babel-jest": "^23.0.1",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-config-standard-react": "^6.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-react": "^7.9.1",
+    "eslint-plugin-standard": "^3.1.0",
+    "fetch-mock": "^6.4.4",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^23.1.0",
+    "node-sass": "^4.9.0",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-each": "^0.10.0",
+    "postcss-import": "^11.1.0",
+    "postcss-mixins": "^6.2.0",
+    "postcss-scss": "^1.0.5",
+    "react-test-renderer": "^16.4.1",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-mock-store": "^1.5.3",
+    "sass-lint": "^1.12.1"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "bluebird": "^3.5.1",
+    "dotenv-safe": "^6.0.0",
+    "express": "^4.16.3",
+    "got": "^8.3.1",
+    "isomorphic-fetch": "^2.2.1",
+    "next": "^6.1.1",
+    "next-redux-wrapper": "^2.0.0-beta.6",
+    "prop-types": "^15.6.1",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-form": "^7.4.2",
+    "redux-thunk": "^2.3.0"
+  },
+  "engines": {
+    "node": "8"
+  },
+  "jest": {
+    "cacheDirectory": "./.test/cache",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.js",
+      "!setupTests.js",
+      "!next-style-loader/**"
+    ],
+    "coverageDirectory": "./.test/coverage",
+    "coverageThreshold": {
+      "global": {
+        "statements": 60
+      }
+    },
+    "setupFiles": [
+      "./setupTests.js"
+    ],
+    "testEnvironment": "node",
+    "testRegex": "\\btest\\.js$",
+    "timers": "fake",
+    "rootDir": ".",
+    "moduleNameMapper": {
+      "\\.(css|scss)$": "identity-obj-proxy"
+    }
+  }
+}
