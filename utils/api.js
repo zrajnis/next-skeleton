@@ -7,9 +7,7 @@ import error from 'utils/error'
 const timeoutCode = 'request.timeout'
 const { API_URL } = process.env
 
-const parseJSON = async resp =>
-  resp.json()
-    .then(parsed => parsed)
+const parseJSON = resp => resp.json()
 
 const buildOptions = (body, options, method) => {
   const defaultOptions = {
