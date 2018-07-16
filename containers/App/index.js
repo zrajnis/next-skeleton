@@ -1,8 +1,8 @@
 import { Component } from 'react'
-import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
 import { helloFoo } from 'actions/hello'
+import pageConnect from 'utils/pageConnect'
 import css from './style.scss'
 
 class App extends Component {
@@ -38,4 +38,4 @@ App.defaultProps = {
   }
 }
 
-export default connect(mapStateToProps)(App)
+export default pageConnect(mapStateToProps)(App)
